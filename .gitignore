@@ -1,5 +1,3 @@
 .env
 *venv*
 *__pycache__*
-*.pg_service.conf
-*.my_pgpass
