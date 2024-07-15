@@ -7,6 +7,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    container_name: postgres
     ports:
       - "5432:5432"
   backend:
@@ -18,7 +19,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - ./backend:/code
-    container_name: backend
+    container_name: django
     ports:
       - '8000:8000'
     depends_on:
